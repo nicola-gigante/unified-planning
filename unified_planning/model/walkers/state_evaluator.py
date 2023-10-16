@@ -53,6 +53,7 @@ class StateEvaluator(QuantifierSimplifier):
         self._state = state
         r = self.walk(expression)
         self._variable_assignments = None
+        self._exp = expression
         assert r.is_constant()
         return r
 
@@ -79,5 +80,5 @@ class StateEvaluator(QuantifierSimplifier):
 
     def walk_param_exp(self, expression: "FNode", args: List["FNode"]) -> "FNode":
         raise UPProblemDefinitionError(
-            f"The StateEvaluator.evaluate should only be called on grounded expressions but is called on the parameter: {expression}"
+            f"The StateEvaluator.evaluate should only be called on grounded expressions but is called on the parameter: {expression} in exp {self._exp}"
         )
