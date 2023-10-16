@@ -28,6 +28,7 @@ class StateEvaluator(QuantifierSimplifier):
 
     def __init__(self, problem: "up.model.problem.Problem"):
         QuantifierSimplifier.__init__(self, problem.environment, problem)
+        self._exp = None
 
     def evaluate(
         self,
