@@ -52,10 +52,9 @@ class StateEvaluator(QuantifierSimplifier):
             Dict["Expression", "Expression"]
         ] = _variable_assignments
         self._state = state
+        self._exp = expression
         r = self.walk(expression)
         self._variable_assignments = None
-        self._exp = expression
-        print("AAAAAAAAAAAAAA", self._exp)
         assert r.is_constant()
         return r
 
