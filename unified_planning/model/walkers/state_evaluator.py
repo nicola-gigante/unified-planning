@@ -55,6 +55,7 @@ class StateEvaluator(QuantifierSimplifier):
         r = self.walk(expression)
         self._variable_assignments = None
         self._exp = expression
+        print("AAAAAAAAAAAAAA", self._exp)
         assert r.is_constant()
         return r
 
