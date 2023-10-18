@@ -175,6 +175,8 @@ class SequentialPlanValidator(engines.engine.Engine, mixins.PlanValidatorMixin):
             try:
                 print(ai.action)
                 print(ai.actual_parameters)
+                for param in ai.actual_parameters:
+                    print(param.is_param_exp())
                 unsat_conds, reason = simulator.get_unsatisfied_conditions(
                     prev_state, ai
                 )
