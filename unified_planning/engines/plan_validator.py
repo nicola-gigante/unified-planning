@@ -173,6 +173,8 @@ class SequentialPlanValidator(engines.engine.Engine, mixins.PlanValidatorMixin):
             assert prev_state is not None
             print(ai)
             try:
+                print(ai.action)
+                print(ai.actual_parameters)
                 unsat_conds, reason = simulator.get_unsatisfied_conditions(
                     prev_state, ai
                 )
