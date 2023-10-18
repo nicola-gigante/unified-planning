@@ -171,6 +171,7 @@ class SequentialPlanValidator(engines.engine.Engine, mixins.PlanValidatorMixin):
         msg = None
         for i, ai in zip(range(1, len(plan.actions) + 1), plan.actions):
             assert prev_state is not None
+            print(ai)
             try:
                 unsat_conds, reason = simulator.get_unsatisfied_conditions(
                     prev_state, ai
