@@ -28,7 +28,7 @@ setup(
         "enhsp": ["up-enhsp==0.0.21"],
         "fast-downward": ["up-fast-downward==0.4.0"],
         "lpg": ["up-lpg==0.0.7"],
-        "fmap": ["up-fmap==0.0.10"],
+        "fmap": ["up-fmap==0.0.13"],
         "aries": ["up-aries>=0.2.0"],
         "symk": ["up-symk>=1.0.1"],
         "engines": [
