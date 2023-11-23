@@ -38,7 +38,7 @@ setup(
             "up-enhsp==0.0.21",
             "up-fast-downward==0.4.0",
             "up-lpg==0.0.7",
-            "up-fmap==0.0.10",
+            "up-fmap==0.0.13",
             "up-aries>=0.2.0",
             "up-symk>=1.0.1",
         ],
